@@ -1,0 +1,37 @@
+extends layout
+
+block content
+    h1 Sign Up
+    form(
+        method="post"
+        action="signin"
+        name="signupform"
+    )
+        label(
+            for="username"
+        ) Username
+        input(
+            type="text"
+            placeholder="Enter a username"
+            name="username"
+            id="username"
+        )
+        label(
+            for="password"
+        ) Password
+        input(
+            type="password"
+            placeholder="Enter a password"
+            name="password"
+            id="password"
+        )
+        input(
+            type="submit"
+            value="Submit"
+        )
+    a(
+        href="/auth/facebook"
+    ) Sign in with Facebook
+    a(
+        href="/auth/google"
+    ) Sign in with Google

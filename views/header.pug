@@ -1,0 +1,30 @@
+div
+    nav
+        ul
+            li
+                a(
+                    href="/"
+                ) Home
+            li
+                a(
+                    href="/protected"
+                ) Protected
+
+div
+    if currentUser
+        p Logged in as #{currentUser.username}
+        form(
+            method="post"
+            action="/signout"
+        )
+            button(
+                type="submit"
+            ) Sign Out
+    else   
+        p Not Logged in
+        a(
+            href="/signin"
+        ) Sign In
+        a(
+            href="/signup"
+        ) Sign Up

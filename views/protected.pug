@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  include header.pug
+  h1 Protected Route
+  p Hello #{currentUser.username}, you are seeing this route because you are logged in. 
